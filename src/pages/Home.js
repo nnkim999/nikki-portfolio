@@ -15,7 +15,7 @@ function Home() {
     <div className="main-section">
       <div className="main-content">
         <div className="first-left-side">
-          <h1>Hi, I'm Nikki Kim</h1>
+          <h1>Hi, I’m Nikki Kim</h1>
           <h2>Computer Science Student</h2>
           <button className="cta-button">More about me</button>
         </div>
