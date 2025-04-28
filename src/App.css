@@ -7,11 +7,18 @@
   font-style: normal;
 }
 
-/* Semibold font */
 @font-face {
-  font-family: 'Open Sauce Sans';
-  src: url('../public/fonts/OpenSauceSans-Regular.ttf') format('truetype');
-  font-weight: 600; /* This should be 600 for semibold */
+  font-family: 'Open Sauce Sans Bold';
+  src: url('../public/fonts/OpenSauceSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-feature-settings: "salt" 
+}
+
+@font-face {
+  font-family: 'Open Sauce Sans Light';
+  src: url('../public/fonts/OpenSauceSans-Light.ttf') format('truetype');
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -20,6 +27,11 @@
   margin: 0;
   padding: 0;
   font-family: 'Open Sauce Sans', Arial, Helvetica, sans-serif;
+  color: black;
+  -webkit-font-smoothing: antialiased;  /* Smoother on Mac */
+  -moz-osx-font-smoothing: grayscale;   /* Smoother on Firefox/Mac */
+  text-rendering: optimizeLegibility;   /* Better spacing */
+  font-feature-settings: "kern" 1;      /* Kerning adjustment */
 }
 
 .gradient-bg {
@@ -29,6 +41,14 @@
     #cdffd8 95%,   /* 5% light green */
     #94b9ff 100%   /* 5% light blue */
   );
+}
+
+h1{
+  font-family: 'Open Sauce Sans Bold'
+}
+
+h2{
+  font-family: 'Open Sauce Sans Light'
 }
 
 
