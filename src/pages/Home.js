@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import "../Styles/Home.css";
 import profileVideo from "../Media/profile.mp4";
+import linkedinicon from "../Media/linkedinicon.png";
+import emailinicon from "../Media/emailicon.png";
 
 function Home() {
   const videoRef = useRef(null);
@@ -18,6 +20,22 @@ function Home() {
           <h1>Hi, I’m Nikki Kim</h1>
           <h2>Computer Science Student</h2>
           <button className="cta-button">More about me</button>
+          <div className="icons-ctr">
+            <div className="icons">
+              <img
+              src={linkedinicon}
+              alt="LinkedIn Logo"
+              className="icons"
+              />
+            </div>
+            <div className="icons">
+              <img
+                src={emailinicon}
+                alt="Email Logo"
+                className="icons"
+                />
+            </div>
+          </div>
         </div>
         <div className="first-right-side">
           <div className="profile-video-container">

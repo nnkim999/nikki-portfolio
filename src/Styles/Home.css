@@ -71,6 +71,7 @@
 
 
 .cta-button {
+  margin-top: 17px;
   padding: 12px 24px;
   background: #94B9FF;
   color: white;
@@ -144,4 +145,20 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.icons-ctr{
+  margin-top: 50px;
+  display: flex;
+}
+
+.icons{
+  width: 42px;
+  margin-right: 20px;
+  height: 42px;
+  border-radius: 100%;
+}
+
+.icons:hover{
+  cursor: pointer;
 }
