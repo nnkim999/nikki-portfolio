@@ -196,10 +196,10 @@
 }
 
 .round-video {
-  width: 300px;
-  height: 300px;
-  min-width: 300px; 
-  min-height: 300px; 
+  width: 450px;
+  height: 450px;
+  min-width: 450px; 
+  min-height: 450px; 
   border-radius: 50%;
   object-fit: cover;
   object-position: center 10%; 
