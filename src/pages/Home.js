@@ -3,11 +3,21 @@ import "../Styles/Home.css";
 import profileVideo from "../Media/profile.mp4";
 import linkedinicon from "../Media/linkedinicon.png";
 import emailinicon from "../Media/emailicon.png";
-import aboutVideo from "../Media/aboutvideo.mp4"
+import giticon from "../Media/giticon.png";
+import aboutVideo from "../Media/aboutvideo.mp4";
 
 function Home() {
   const profileVideoRef = useRef(null);
   const aboutVideoRef = useRef(null);
+
+  //section references
+  const aboutSectionRef = useRef(null); 
+
+  const scrollToAbout = () => {
+    aboutSectionRef.current?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
 
   const handleLoadedData = () => {
     if (profileVideoRef.current) {
@@ -23,14 +33,20 @@ function Home() {
         <div className="half-left-side">
           <h1>Hi, I’m Nikki Kim</h1>
           <h2>Computer Science Student</h2>
-          <button className="cta-button">More about me</button>
+          <button className="cta-button" onClick={scrollToAbout}>More about me</button>
           <div className="icons-ctr">
             <div className="icons">
-              <img
-              src={linkedinicon}
-              alt="LinkedIn Logo"
-              className="icons"
-              />
+              <a 
+                href="https://www.linkedin.com/in/nikki-kim-161749229/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={linkedinicon}
+                  alt="LinkedIn Logo"
+                  className="icons" 
+                />
+              </a>
             </div>
             <div className="icons">
               <img
@@ -38,6 +54,19 @@ function Home() {
                 alt="Email Logo"
                 className="icons"
                 />
+            </div>
+            <div className="icons">
+              <a 
+                  href="https://github.com/nnkim999" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={giticon}
+                    alt="Github Logo"
+                    className="icons"  
+                  />
+              </a>
             </div>
           </div>
         </div>
@@ -62,7 +91,7 @@ function Home() {
       </div>
 
       <div className="mt"></div>
-      <div className="about-content">
+      <div className="about-content" ref={aboutSectionRef}>
             <div className='half-left-side'>
               <div className="round-video-container">
                 <video
