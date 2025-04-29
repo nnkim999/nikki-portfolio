@@ -15,8 +15,7 @@ function Home() {
     }
   };
 
-
-
+  
   return (
     <div className="main-section">
       <div className="mt"></div>
@@ -61,6 +60,7 @@ function Home() {
           </div>
         </div>
       </div>
+
       <div className="mt"></div>
       <div className="about-content">
             <div className='half-left-side'>
@@ -95,6 +95,30 @@ function Home() {
               </div>
             </div>
       </div>
+
+      <div className="mt"></div>
+      <div className='experience-content'>
+        <h1>Experiences</h1>
+      </div>
+
+      <div className="mt"></div>
+      <div className='project-content'>
+        <h1>Projects</h1>
+      </div>
+
+      <div className="mt"></div>
+      <div className='connect-content'>
+        <div className='half-left-side'>
+          <h1>Let’s connect</h1>
+          <h2>I’d love to get to know you.</h2>
+          <h3>EMAIL</h3>
+          <h2>nikkikim999@gmail.com</h2>
+        </div>
+        <div className='half-right-side'>
+   
+        </div>
+      </div>
+
     </div>
 
 
