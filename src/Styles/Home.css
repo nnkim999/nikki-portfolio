@@ -103,11 +103,7 @@
   color: #333;
 }
 
-.experience-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 2rem;
-  color: #333;
-}
+
 
 .project-content h1{
   font-size: 3.5rem;
@@ -295,3 +291,161 @@
   filter: drop-shadow(0 0 8px #94B9FF);
 }
 
+/* Timeline Experience Section */
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+}
+
+.experience-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.timeline-container {
+  position: relative;
+  padding-left: 50px;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, 
+    rgba(148, 185, 255, 0.2), 
+    #94B9FF, 
+    rgba(148, 185, 255, 0.2));
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.experience-items {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.experience-box {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.2s ease;
+}
+
+.experience-dot {
+  position: relative;
+  left: -39px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #94B9FF;
+  box-shadow: 0 0 0 4px rgba(148, 185, 255, 0.3);
+  z-index: 3;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.experience-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+/* Hover effects for the entire experience box */
+.experience-box:hover .experience-dot {
+  transform: scale(1.2);
+  background-color: #94B9FF;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px #94B9FF;
+  animation: softPulse 1.5s infinite alternate;
+}
+
+.experience-box:hover .experience-card {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(148, 185, 255, 0.2);
+}
+
+/* Dot pulse animation */
+@keyframes softPulse {
+  0% {
+    box-shadow: 
+      0 0 0 6px rgba(148, 185, 255, 0.15),
+      0 0 10px 6px rgba(148, 185, 255, 0.1),
+      0 0 20px 10px rgba(148, 185, 255, 0.05);
+  }
+  50% {
+    box-shadow: 
+      0 0 0 8px rgba(148, 185, 255, 0.12),
+      0 0 14px 8px rgba(148, 185, 255, 0.08),
+      0 0 25px 12px rgba(148, 185, 255, 0.04);
+  }
+  100% {
+    box-shadow: 
+      0 0 0 6px rgba(148, 185, 255, 0.15),
+      0 0 10px 6px rgba(148, 185, 255, 0.1),
+      0 0 20px 10px rgba(148, 185, 255, 0.05);
+  }
+}
+
+
+/* Rest of your existing styles... */
+.experience-card h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.experience-card h3 {
+  font-size: 1.2rem;
+  color: #94B9FF;
+  margin-bottom: 0.25rem;
+}
+
+.experience-date {
+  color: #666;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.experience-details {
+  margin-left: 1rem;
+}
+
+.experience-details li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+/* Timeline line animation */
+@keyframes glow {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+.timeline-line {
+  background: linear-gradient(to bottom, 
+    rgba(148, 185, 255, 0.1), 
+    #94B9FF, 
+    rgba(148, 185, 255, 0.1));
+  
+    
+  background-size: 100% 200%;
+  animation: glow 5s ease infinite alternate;
+}

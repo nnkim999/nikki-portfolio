@@ -19,16 +19,28 @@ function Home() {
   const connectSectionRef = useRef(null);
 
   // Scroll handler
+ 
+
+  const handleLoadedData = () => {
+    if (profileVideoRef.current) {
+      profileVideoRef.current.playbackRate = 0.3;
+    }
+  };
+
+  // Add this effect to your scrollToSection function
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     });
-  };
-
-  const handleLoadedData = () => {
-    if (profileVideoRef.current) {
-      profileVideoRef.current.playbackRate = 0.3;
+    
+    // Add temporary glow effect
+    if (ref === experienceSectionRef) {
+      const timeline = document.querySelector('.timeline-line');
+      timeline.style.animation = 'none';
+      setTimeout(() => {
+        timeline.style.animation = 'glow 2s ease';
+      }, 10);
     }
   };
 
@@ -140,9 +152,60 @@ function Home() {
             </div>
       </div>
 
-      <div className="mt-lg"></div>
-      <div className='experience-content' ref={experienceSectionRef}>
+
+      <div className="mt-lg" ref={experienceSectionRef}></div>
+      <div className='mt-sm'></div>
+      <div className='experience-content' >
         <h1>Experiences</h1>
+        <div className="timeline-container">
+          {/* Timeline line */}
+          <div className="timeline-line"></div>
+          
+          {/* Experience items */}
+          <div className="experience-items">
+            <div className="experience-box">
+              <div className="experience-dot"></div>
+              <div className="experience-card">
+                <h2>Systems Developer Intern (Full-stack developer)</h2>
+                <h3>AUC</h3>
+                <p className="experience-date">Fall 2023 - Present</p>
+                <ul className="experience-details">
+                  <li>Developed a user-friendly interface to systematically measure architectural practices</li>
+                  <li>Automated data collection, reducing manual effort from 15+ hrs to 20 mins</li>
+                  <li>Presented system designs for optimizing enterprise systems</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="experience-box">
+              <div className="experience-dot"></div>
+              <div className="experience-card">
+                <h2>Vice President of Marketing</h2>
+                <h3>Women in Computer Science</h3>
+                <p className="experience-date">Jan 2024 - Present</p>
+                <ul className="experience-details">
+                  <li>Led user testing resulting in 21% usability improvement</li>
+                  <li>Integrated user insights across cross-functional teams</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="experience-box">
+              <div className="experience-dot"></div>
+              <div className="experience-card">
+                <h2>Junior Vice President of Finance</h2>
+                <h3>Competitive Programming Club</h3>
+                <p className="experience-date">Jan 2024 - Present</p>
+                <ul className="experience-details">
+                  <li>Led user testing resulting in 21% usability improvement</li>
+                  <li>Integrated user insights across cross-functional teams</li>
+                </ul>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
       </div>
 
       <div className="mt-lg"></div>
