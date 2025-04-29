@@ -1,18 +1,60 @@
 import React from "react";
-import '../style/Navbar.css'; 
+import '../Styles/Navbar.css';
 
-function Navbar() {
+function Navbar({ scrollToSection, sectionRefs }) {
   return (
-    <header>
-      <nav className="navbar">
-        <ul className="nav-links">
-          <li><a href="#home" className="nav-item">Home</a></li>
-          <li><a href="#aboutme" className="nav-item">About me</a></li>
-          <li><a href="#experiences" className="nav-item">Experiences</a></li>
-          <li><a href="#projects" className="nav-item">Projects</a></li>
-          <li><a href="#connect" className="nav-item">Connect</a></li>
-        </ul>
-      </nav>
+    <header className="navbar-header">
+      <div className="navbar-container">
+        <nav className="navbar">
+          {/* Left-aligned brand */}
+          <div className="navbar-brand">
+            <button 
+                  className="nav-item"
+                  onClick={() => scrollToSection(sectionRefs.home)}
+                >
+                  Home
+              </button>
+          </div>
+          
+          {/* Right-aligned navigation */}
+          <div className="navbar-right">
+            <ul className="nav-links">
+              <li>
+                <button 
+                  className="nav-item"
+                  onClick={() => scrollToSection(sectionRefs.about)}
+                >
+                  About me
+                </button>
+              </li>
+              <li>
+                <button 
+                  className="nav-item"
+                  onClick={() => scrollToSection(sectionRefs.experiences)}
+                >
+                  Experiences
+                </button>
+              </li>
+              <li>
+                <button 
+                  className="nav-item"
+                  onClick={() => scrollToSection(sectionRefs.projects)}
+                >
+                  Projects
+                </button>
+              </li>
+              <li>
+                <button 
+                  className="nav-item"
+                  onClick={() => scrollToSection(sectionRefs.connect)}
+                >
+                  Connect
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
   );
 }

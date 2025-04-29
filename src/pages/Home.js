@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import "../Styles/Home.css";
+import Navbar from '../Pages/Navbar';
 import profileVideo from "../Media/profile.mp4";
 import linkedinicon from "../Media/linkedinicon.png";
 import emailinicon from "../Media/emailicon.png";
@@ -11,11 +12,17 @@ function Home() {
   const aboutVideoRef = useRef(null);
 
   //section references
-  const aboutSectionRef = useRef(null); 
+  const homeSectionRef = useRef(null);
+  const aboutSectionRef = useRef(null);
+  const experienceSectionRef = useRef(null);
+  const projectSectionRef = useRef(null);
+  const connectSectionRef = useRef(null);
 
-  const scrollToAbout = () => {
-    aboutSectionRef.current?.scrollIntoView({
-      behavior: 'smooth'
+  // Scroll handler
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
     });
   };
 
@@ -27,13 +34,20 @@ function Home() {
 
   
   return (
-    <div className="main-section">
-      <div className="mt"></div>
+    <div className="main-section" ref={homeSectionRef}>
+        <Navbar scrollToSection={scrollToSection} sectionRefs={{
+        home: homeSectionRef,
+        about: aboutSectionRef,
+        experiences: experienceSectionRef,
+        projects: projectSectionRef,
+        connect: connectSectionRef
+      }} />
+      <div className="mt-md"></div>
       <div className="main-content">
         <div className="half-left-side">
           <h1>Hi, I’m Nikki Kim</h1>
           <h2>Computer Science Student</h2>
-          <button className="cta-button" onClick={scrollToAbout}>More about me</button>
+          <button className="cta-button" onClick={() => scrollToSection(aboutSectionRef)}>More about me</button>
           <div className="icons-ctr">
             <div className="icons">
               <a 
@@ -48,12 +62,12 @@ function Home() {
                 />
               </a>
             </div>
-            <div className="icons">
+            <div className="icons" onClick={() => scrollToSection(connectSectionRef)}>
               <img
                 src={emailinicon}
                 alt="Email Logo"
                 className="icons"
-                />
+              />
             </div>
             <div className="icons">
               <a 
@@ -90,8 +104,9 @@ function Home() {
         </div>
       </div>
 
-      <div className="mt"></div>
-      <div className="about-content" ref={aboutSectionRef}>
+      <div className="mt-lg"  ref={aboutSectionRef}></div>
+      <div className='mt-sm'></div>
+      <div className="about-content">
             <div className='half-left-side'>
               <div className="round-video-container">
                 <video
@@ -125,18 +140,18 @@ function Home() {
             </div>
       </div>
 
-      <div className="mt"></div>
-      <div className='experience-content'>
+      <div className="mt-lg"></div>
+      <div className='experience-content' ref={experienceSectionRef}>
         <h1>Experiences</h1>
       </div>
 
-      <div className="mt"></div>
-      <div className='project-content'>
+      <div className="mt-lg"></div>
+      <div className='project-content' ref={projectSectionRef}>
         <h1>Projects</h1>
       </div>
 
-      <div className="mt"></div>
-      <div className='connect-content'>
+      <div className="mt-lg"></div>
+      <div className='connect-content' ref={connectSectionRef}>
         <div className='half-left-side'>
           <h1>Let’s connect</h1>
           <h2>I’d love to get to know you.</h2>

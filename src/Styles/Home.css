@@ -24,9 +24,18 @@
   }
 }
 
-.mt{
+.mt-lg{
   margin-top: 240px;
 }
+
+.mt-md{
+  margin-top: 140px;
+} 
+
+.mt-sm{
+  margin-top: 90px;
+} 
+
 
 .main-section {
   min-height: 100vh;
