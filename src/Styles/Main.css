@@ -1,0 +1,145 @@
+
+/*General*/
+
+.constraint{
+    max-width: 500px;
+    margin: auto;
+  }
+
+.content-container{
+    padding: 40px 15px;
+}
+
+.extra-padding-50{
+    padding-bottom: 80px;
+  }
+
+.extra-padding-25{
+    padding-bottom: 40px;
+}
+
+.centered-text{
+    text-align: center;
+  }
+
+.thin{
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+/*Hero section*/
+
+.video-container{
+    display: flex;
+    justify-content: center;
+}
+
+.round-video{
+    width: 300px;
+    height: 300px;
+    min-width: 300px; 
+    min-height: 300px; 
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 10%; 
+    display: block;
+    transform: translateZ(0);
+    cursor: default;
+}
+
+.cta-btn {
+    margin-top: 28px;
+    padding: 12px 24px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .icons-ctr {
+    margin-top: 25px;
+    display: flex;
+  }
+  
+  .icons {
+    width: 42px;
+    margin-right: 20px;
+    height: 42px;
+    border-radius: 100%;
+    background-color: white;
+    padding: 0.1px; 
+  }
+  
+  .icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+
+  /*Skills section*/
+/* Mobile Skills Section - FORCED 2 columns */
+.content-container.skills {
+    width: 100%;
+    overflow: hidden; /* Prevents horizontal scrolling */
+  }
+  
+  .skills-grid-wrapper {
+    width: 100%;
+    overflow: visible;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* FORCE 2 columns */
+    gap: 16px; /* Adjust spacing as needed */
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0; /* Fixes flexbox overflow */
+  }
+  
+  .skill-box {
+    width: 100%;
+    aspect-ratio: 1/1; /* Perfect square */
+    max-width: 120px; /* Control size */
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .skill-logo {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+  }
+  
+  .skill-name {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
