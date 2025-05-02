@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import "../Styles/Main.css";
 
 
@@ -46,6 +46,32 @@ function Main(){
           profileVideoRef.current.playbackRate = 0.3;
         }
       };
+
+
+    //projects
+    // Inside your Main component:
+    const [currentProject, setCurrentProject] = useState(0);
+
+    const projects = [
+    {
+        id: 1,
+        title: "Evently",
+        description: "I'm Kalvin Doe. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+    },
+    {
+        id: 2,
+        title: "Portfolio Website",
+        description: "Designed and developed a responsive portfolio site showcasing my work with animations."
+    }
+    ];
+
+    const nextProject = () => {
+    setCurrentProject((prev) => (prev + 1) % projects.length);
+    };
+
+    const prevProject = () => {
+    setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length);
+    };
 
     return(
         <div className="constraint">
@@ -326,15 +352,36 @@ function Main(){
                 </div>
             </div>
 
-   
-
-    
 
             <div className='content-container projects'>
-                <h1><span className='thin'>My</span> Projects</h1>
+                <h1 className='centered-text'><span className='thin'>My</span> Projects</h1>
+                <div className='project-slider'>
+                    {/* Left Arrow - now part of the flex flow */}
+                    <div className="nav-arrow arrow-left" onClick={prevProject}>
+                    <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    </div>
 
+                    {/* Project Box - centered with spacing */}
+                    <div className="project-box">
+                    <div className='project-content'>
+                        <h3 className="project-name">{projects[currentProject].title}</h3>
+                        <p className="project-description">
+                        {projects[currentProject].description}
+                        </p>
+                    </div>
+                    </div>
 
+                    {/* Right Arrow - now part of the flex flow */}
+                    <div className="nav-arrow arrow-right" onClick={nextProject}>
+                    <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                    </div>
+                </div>
             </div>
+
 
             <div className='content-container connect'>
                 <h1>Connect <span className='thin'>with me</span></h1>

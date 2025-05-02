@@ -30,6 +30,7 @@
     font-weight: 700;
 }
 
+
 h1 {
     font-size: 2.8rem;
     margin-bottom: 1rem;
@@ -302,6 +303,7 @@ h1 {
   }
 
 
+
   /*Connect section*/
   .content-container.connect{
     width: 100%;
@@ -313,3 +315,59 @@ h1 {
     text-align: center;
     padding-bottom: 40px;
 }
+
+
+/*Projects section*/
+
+/* Projects Section */
+
+.content-container.projects{
+    width: 100%;
+}
+/* Project Slider Styles */
+.project-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* This creates space between arrows and box */
+    position: relative;
+    margin: 50px 0;
+  }
+  
+  .project-box {
+    background: black;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 30px;
+    min-height: 300px;
+    width: 90%; /* Control box width */
+    max-width: 1000px;
+    margin: 0 auto; /* Center the box */
+  }
+  
+  .nav-arrow {
+    background: black;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 5px;
+    flex-shrink: 0; /* Prevent arrows from shrinking */
+    position: static; /* Change from absolute to static */
+  }
+  
+  .nav-arrow:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  
+  h3.project-name{
+    padding-bottom: 10px;
+  }
