@@ -9,7 +9,7 @@ import emailinicon from "../Media/emailicon.png";
 import giticon from "../Media/giticon.png";
 import aucicon from "../Media/aucicon.png";
 import wicsicon from "../Media/wicsicon.png";
-import cpcicon from "../Media/cpcicon.jpeg";
+import cpcicon from "../Media/cpcicon.png";
 import { TbBrandCSharp } from "react-icons/tb";
 
 import {
