@@ -247,7 +247,7 @@ function Main(){
                                 alt="AUC Logo"
                                 className="icons" 
                                 />
-                        <h2 class="job-title">Systems Developer Intern at AUC</h2>
+                        <h2 class="job-title">Systems Developer Intern at <span className="bolded">AUC</span> </h2>
                     </div>
                     <div class="date">September 2023 – Present</div>
                         <p>As a developer, I created web applications using Blazor, HTML, CSS, C#, Entity Framework, REST API, and SQL to deliver efficient, user-friendly solutions while collaborating with a 7-member team through code reviews and Azure repository management.</p>
@@ -264,7 +264,7 @@ function Main(){
                                 alt="WICS Logo"
                                 className="icons" 
                                 />
-                        <h2 class="job-title">VP of Marketing at WiCS</h2>
+                        <h2 class="job-title">VP of Marketing at <span className='bolded'>WiCS</span></h2>
                         <div class="date">Oct 2023 - May 2025</div>
                         <p>At WiCS, I served as the VP of marketing, focusing on the design and marketing for the club's social media. Working on projects that involved multiple sponsors and events, I managed 2 Junior VPs and increased reachability and engagement by 200%.</p>
                         </div>
@@ -277,7 +277,7 @@ function Main(){
                                 alt="CPC Logo"
                                 className="icons" 
                                 />
-                        <h2 class="job-title">Junior VP of Finance at Competitive Programming Club</h2>
+                        <h2 class="job-title">Junior VP of Finance at <span className='bolded'>Competitive Programming Club</span></h2>
                         <div class="date">Jan 2023 - May 2024</div>
                         <p>At CPC, I held the role of Jr VP of Finance, where I played a key role in managing the club finances. Responsible for creating and handling invoices to sponsors, I provided strong organization and communication to a cross-functional team.</p>
                         </div>
