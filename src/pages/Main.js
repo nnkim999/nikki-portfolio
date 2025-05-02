@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import "../Styles/Main.css";
 
+
+import aboutVideo from "../Media/aboutvideo.mp4";
 import profileVideo from "../Media/profile.mp4";
 import linkedinicon from "../Media/linkedinicon.png";
 import emailinicon from "../Media/emailicon.png";
@@ -37,6 +39,7 @@ import { VscSymbolNamespace } from "react-icons/vsc"; // Alternative for Eclipse
 
 function Main(){
 
+    const aboutVideoRef = useRef(null);
     const profileVideoRef = useRef(null);
     const handleLoadedData = () => {
         if (profileVideoRef.current) {
@@ -81,7 +84,7 @@ function Main(){
                             <img
                             src={linkedinicon}
                             alt="LinkedIn Logo"
-                            className="icons" 
+                            className="icons linkedin-icon" 
                             />
                         </a>
                         </div>
@@ -89,7 +92,7 @@ function Main(){
                         <img
                             src={emailinicon}
                             alt="Email Logo"
-                            className="icons"
+                            className="icons email-icon"
                         />
                         </div>
                         <div className="icons">
@@ -101,7 +104,7 @@ function Main(){
                             <img
                                 src={giticon}
                                 alt="Github Logo"
-                                className="icons"  
+                                className="icons github-icon"  
                             />
                         </a>
                         </div>
@@ -289,7 +292,22 @@ function Main(){
 
             <div className='content-container about'>
                 <div className='hero-right'>
-
+                    <div className='video-container extra-padding-25'>
+                        <video
+                            ref={aboutVideoRef}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="round-video"
+                            onLoadedData={handleLoadedData}
+                            style={{
+                            pointerEvents: 'none' // Disables all interactions
+                            }}
+                        >
+                            <source src={aboutVideo} type="video/mp4" />
+                        </video>
+                    </div>
                 </div>
                 <div className='hero-left'>
                     <div className='text-section-container'>
@@ -305,11 +323,7 @@ function Main(){
                         In my free time, I love reading books, running marathons, and gardening!
                         </h2>
                     </div>
-                    
-
                 </div>
-
-
             </div>
 
    
@@ -323,7 +337,7 @@ function Main(){
             </div>
 
             <div className='content-container connect'>
-                <h1>Connect with me</h1>
+                <h1>Connect <span className='thin'>with me</span></h1>
 
 
             </div>
