@@ -6,6 +6,33 @@ import linkedinicon from "../Media/linkedinicon.png";
 import emailinicon from "../Media/emailicon.png";
 import giticon from "../Media/giticon.png";
 
+import { TbBrandCSharp } from "react-icons/tb";
+
+import {
+    SiJavascript,
+    SiHtml5,
+    SiCss3,
+    SiPython,
+    SiNodedotjs,
+    SiReact,
+    SiDjango,
+    SiMysql, // Works for MySQL
+    SiCplusplus, // Works for C++
+    SiBlazor, // Works for Blazor
+    SiGit, // Works for Git
+    SiDocker, // Works for Docker
+    SiSelenium, // Works for Selenium
+    SiJunit5,
+    SiC, // Works for JUnit
+  } from "react-icons/si";
+
+import { FaJava, FaJira } from "react-icons/fa"; // Java, JIRA, Git Alternative
+import { DiDatabase } from "react-icons/di"; // General SQL/Database Icon
+import { TbBrandVisualStudio, TbBrandVscode } from "react-icons/tb"; // VS & VS Code
+import { BiSolidServer } from "react-icons/bi"; // SQL Server Studio (Alternative)
+//import { SiCloud } from "react-icons/si"; // Cloud icon, a good substitute for Azure
+import { VscSymbolNamespace } from "react-icons/vsc"; // Alternative for Eclipse
+
 function Main(){
 
     const profileVideoRef = useRef(null);
@@ -88,37 +115,120 @@ function Main(){
 
                 <div className="skills-grid-wrapper">
                     <div className="skills-grid">
-                    {/* Skill 1 */}
-                    <div className="skill-item">
-                        <div className="skill-box">
-                        <img src={expressIcon} alt="C#" className="skill-logo" />
+                   
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <SiHtml5 className="skill-icon html-icon" />
+                            </div>
+                            <div className="skill-name">HTML</div>
                         </div>
-                        <div className="skill-name">C#</div>
-                    </div>
 
-                    {/* Skill 2 */}
-                    <div className="skill-item">
-                        <div className="skill-box">
-                        <img src={javascriptIcon} alt="Python" className="skill-logo" />
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <SiCss3 className="skill-icon css-icon" />
+                            </div>
+                            <div className="skill-name">CSS</div>
                         </div>
-                        <div className="skill-name">Python</div>
-                    </div>
 
-                    {/* Skill 3 */}
-                    <div className="skill-item">
-                        <div className="skill-box">
-                        <img src={angularIcon} alt="SQL" className="skill-logo" />
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <SiJavascript className="skill-icon js-icon" />
+                            </div>
+                            <div className="skill-name">JavaScript</div>
                         </div>
-                        <div className="skill-name">SQL</div>
-                    </div>
 
-                    {/* Skill 4 */}
-                    <div className="skill-item">
-                        <div className="skill-box">
-                        <img src={typescriptIcon} alt="React" className="skill-logo" />
+
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <SiPython className="skill-icon python-icon" />
+                            </div>
+                            <div className="skill-name">Python</div>
                         </div>
-                        <div className="skill-name">React</div>
-                    </div>
+
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <TbBrandCSharp className="skill-icon csharp-icon" />
+                            </div>
+                            <div className="skill-name">C#</div>
+                        </div>
+
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <SiCplusplus className="skill-icon cplusplus-icon" />
+                            </div>
+                            <div className="skill-name">C++</div>
+                        </div>
+
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <FaJava className="skill-icon java-icon" />
+                            </div>
+                            <div className="skill-name">Java</div>
+                        </div>
+
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <SiMysql className="skill-icon mysql-icon" />
+                            </div>
+                            <div className="skill-name">MySQL</div>
+                        </div>
+
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <DiDatabase className="skill-icon sql-icon" />
+                            </div>
+                            <div className="skill-name">SQL (General)</div>
+                        </div>
+
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <BiSolidServer className="skill-icon sql-server-icon" />
+                            </div>
+                            <div className="skill-name">SQL Server Studio</div>
+                        </div>
+
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <SiReact className="skill-icon react-icon" />
+                            </div>
+                            <div className="skill-name">React</div>
+                        </div>
+
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <SiDocker className="skill-icon docker-icon" />
+                            </div>
+                            <div className="skill-name">Docker</div>
+                        </div>
+
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <TbBrandVisualStudio className="skill-icon vs-icon" />
+                            </div>
+                            <div className="skill-name">Visual Studio</div>
+                        </div>
+
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <TbBrandVscode className="skill-icon vsc-icon" />
+                            </div>
+                            <div className="skill-name">Visual Studio Code</div>
+                        </div>
+
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <SiGit className="skill-icon git-icon"/>
+                            </div>
+                            <div className="skill-name">Git</div>
+                        </div>
+
+                        <div className="skill-item">
+                            <div className="skill-box">
+                                <SiBlazor className="skill-icon blazor-icon" />
+                            </div>
+                            <div className="skill-name">Blazor</div>
+                        </div>
+
                     </div>
                 </div>
             </div>

@@ -89,7 +89,6 @@ h1 {
 
 
   /*Skills section*/
-/* Mobile Skills Section - FORCED 2 columns */
 .content-container.skills {
     width: 100%;
     overflow: hidden; /* Prevents horizontal scrolling */
@@ -112,13 +111,13 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 0; /* Fixes flexbox overflow */
+    min-width: 0;
   }
   
   .skill-box {
     width: 100%;
     aspect-ratio: 1/1; /* Perfect square */
-    max-width: 120px; /* Control size */
+    max-width: 120px;
     border: 2px solid #000;
     display: flex;
     align-items: center;
@@ -142,4 +141,81 @@ h1 {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+
+.skill-icon {
+    width: 60%;
+    height: 60%;
+    color: black; 
+    filter: grayscale(100%) brightness(0) contrast(100%);
+    transition: all 0.1s ease;
+  }
   
+  .skill-item:hover .skill-icon {
+    filter: none;
+    transform: scale(1.1);
+  }
+
+  .git-icon {
+    color: #F05033;
+  }
+
+  .docker-icon {
+    color: #2496ed;
+  }
+
+  .vsc-icon {
+    color: #007acc;
+  }
+
+  .vs-icon {
+    color: #5c2d91;
+  }
+
+  .html-icon {
+    color: #e34c26;
+  }
+
+  .css-icon {
+    color: #2965f1;
+  }
+
+  .python-icon {
+    color: #306998;
+  }
+
+  .java-icon {
+    color: #f8981d;
+  }
+
+  .js-icon {
+    color: #f7df1e;
+  }
+
+  .cplusplus-icon {
+    color: #00599c;
+  }
+
+  .csharp-icon {
+    color: #178600;
+  }
+
+  .mysql-icon {
+    color: #00618d;
+  }
+
+  .sql-icon {
+    color: #4e5b62;
+  }
+
+  .sql-server-icon {
+    color: #4d4d4d;
+  }
+
+  .blazor-icon {
+    color: #5a2e8c;
+  }
+
+  .react-icon{
+    color: #61dafb;
+  }
