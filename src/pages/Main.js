@@ -5,7 +5,9 @@ import profileVideo from "../Media/profile.mp4";
 import linkedinicon from "../Media/linkedinicon.png";
 import emailinicon from "../Media/emailicon.png";
 import giticon from "../Media/giticon.png";
-
+import aucicon from "../Media/aucicon.png";
+import wicsicon from "../Media/wicsicon.png";
+import cpcicon from "../Media/cpcicon.jpeg";
 import { TbBrandCSharp } from "react-icons/tb";
 
 import {
@@ -233,6 +235,58 @@ function Main(){
                 </div>
             </div>
 
+            <div className='content-container experiences'>
+                <h1><span className='thin '>My</span> Experiences</h1>
+
+                <div class="timeline">
+                <div class="experience-item">
+                    <div class="experience-content">
+                    <div class="job-header">
+                        <img
+                                src={aucicon}
+                                alt="AUC Logo"
+                                className="icons" 
+                                />
+                        <h2 class="job-title">Systems Developer Intern at AUC</h2>
+                    </div>
+                    <div class="date">September 2023 – Present</div>
+                        <p>As a developer, I created web applications using Blazor, HTML, CSS, C#, Entity Framework, REST API, and SQL to deliver efficient, user-friendly solutions while collaborating with a 7-member team through code reviews and Azure repository management.</p>
+                        <p>Serving dual roles, I acted as Junior Project Manager to coordinate team efforts and stakeholder communication, while implementing agile methodologies to meet sprint deadlines. </p>
+                        <p>I enhanced application quality by implementing new features, conducting thorough testing, improving UI with Radzen, and integrating Fluent Validation for robust data validation.</p>
+                        <p>My exceptional performance was recognized with an Employee Appreciation Award, leading to a part-time position offer to balance continued contributions with academic commitments.</p>
+                   </div>
+                </div>
+
+                    <div class="experience-item">
+                        <div class="experience-content">
+                        <img
+                                src={wicsicon}
+                                alt="WICS Logo"
+                                className="icons" 
+                                />
+                        <h2 class="job-title">VP of Marketing at WiCS</h2>
+                        <div class="date">Oct 2023 - May 2025</div>
+                        <p>At WiCS, I served as the VP of marketing, focusing on the design and marketing for the club's social media. Working on projects that involved multiple sponsors and events, I managed 2 Junior VPs and increased reachability and engagement by 200%.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-content">
+                        <img
+                                src={cpcicon}
+                                alt="CPC Logo"
+                                className="icons" 
+                                />
+                        <h2 class="job-title">Junior VP of Finance at Competitive Programming Club</h2>
+                        <div class="date">Jan 2023 - May 2024</div>
+                        <p>At CPC, I held the role of Jr VP of Finance, where I played a key role in managing the club finances. Responsible for creating and handling invoices to sponsors, I provided strong organization and communication to a cross-functional team.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
             <div className='content-container about'>
                 <div className='hero-right'>
 
@@ -258,11 +312,7 @@ function Main(){
 
             </div>
 
-            <div className='content-container experiences'>
-                <h1><span className='thin'>My</span> Experiences</h1>
-
-
-            </div>
+   
 
     
 
