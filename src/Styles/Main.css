@@ -1,10 +1,18 @@
 
 /*General*/
 
-.constraint{
-    max-width: 800px;
-    margin: auto;
+.constraint {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box; /* Crucial - includes padding in width calculation */
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    display: block; /* Remove flex unless specifically needed */
   }
+  
+
+
+
 
 .content-container{
     padding: 40px 15px;
@@ -99,7 +107,6 @@ h1 {
 
   /*Skills section*/
 .content-container.skills {
-    width: 100%;
     overflow: hidden; /* Prevents horizontal scrolling */
   }
   
@@ -333,6 +340,7 @@ h1 {
   /*Connect section*/
   .content-container.connect{
     background-color: black;
+    margin-top: -1px;
 }
 
 .connect h1{
@@ -340,6 +348,7 @@ h1 {
     text-align: center;
     padding-bottom: 40px;
 }
+
 
 
 /*Projects section*/
@@ -353,6 +362,7 @@ h1 {
       rgba(0,0,0,1) 100%
     );
     padding: 80px 0 200px;
+    margin-bottom: -1px;
 }
 /* Project Slider Styles */
 .project-slider {
@@ -361,7 +371,7 @@ h1 {
     justify-content: center;
     gap: 20px; /* This creates space between arrows and box */
     position: relative;
-    margin: 50px 0;
+    margin: 50px 5px;
   }
   
   .project-box {

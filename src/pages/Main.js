@@ -369,43 +369,45 @@ function Main(){
                 </div>
             </div>
 
+            <div className='gradient-bg'>
 
-            <div className='content-container projects' ref={projectSectionRef}>
-                <h1 className='centered-text'><span className='thin'>My</span> Projects</h1>
-                <div className='project-slider'>
-                    {/* Left Arrow - now part of the flex flow */}
-                    <div className="nav-arrow arrow-left" onClick={prevProject}>
-                    <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                    </div>
+                <div className='content-container projects' ref={projectSectionRef}>
+                    <h1 className='centered-text'><span className='thin'>My</span> Projects</h1>
+                    <div className='project-slider'>
+                        {/* Left Arrow - now part of the flex flow */}
+                        <div className="nav-arrow arrow-left" onClick={prevProject}>
+                        <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                        </div>
 
-                    {/* Project Box - centered with spacing */}
-                    <div className="project-box">
-                    <div className='project-content'>
-                        <h3 className="project-name">{projects[currentProject].title}</h3>
-                        <p className="project-description">
-                        {projects[currentProject].description}
-                        </p>
-                    </div>
-                    </div>
+                        {/* Project Box - centered with spacing */}
+                        <div className="project-box">
+                        <div className='project-content'>
+                            <h3 className="project-name">{projects[currentProject].title}</h3>
+                            <p className="project-description">
+                            {projects[currentProject].description}
+                            </p>
+                        </div>
+                        </div>
 
-                    {/* Right Arrow - now part of the flex flow */}
-                    <div className="nav-arrow arrow-right" onClick={nextProject}>
-                    <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                    </svg>
+                        {/* Right Arrow - now part of the flex flow */}
+                        <div className="nav-arrow arrow-right" onClick={nextProject}>
+                        <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                        </div>
                     </div>
                 </div>
+
+
+                <div className='content-container connect' ref={connectSectionRef}>
+                    <h1>Connect <span className='thin'>with me</span></h1>
+
+
+                </div>
+
             </div>
-
-
-            <div className='content-container connect' ref={connectSectionRef}>
-                <h1>Connect <span className='thin'>with me</span></h1>
-
-
-            </div>
-
 
 
         </div>
