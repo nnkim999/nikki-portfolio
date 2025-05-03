@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
 import "../Styles/Main.css";
+import Navbar from '../Pages/Navbar';
+import EmailForm from '../Pages/Email';
 
 
 import aboutVideo from "../Media/aboutvideo.mp4";
@@ -11,6 +13,7 @@ import aucicon from "../Media/aucicon.png";
 import wicsicon from "../Media/wicsicon.png";
 import cpcicon from "../Media/cpcicon.png";
 import { TbBrandCSharp } from "react-icons/tb";
+import emailjs from 'emailjs-com';
 
 import {
     SiJavascript,
@@ -89,7 +92,7 @@ function Main(){
     };
 
 
-
+    
     return(
         <div className="constraint">
             <div className='content-container hero extra-padding-50' ref={homeSectionRef}>
@@ -357,15 +360,15 @@ function Main(){
                 <div className='hero-left'>
                     <div className='text-section-container'>
                         <h1 className='extra-padding-25'><span className='thin'>About</span> Me</h1>
-                        <h2>Hi, I’m Nikki, a third-year <span className='blue'>Computer Science student </span> at the <span className='blue'>University of Calgary</span> with a passion for software and creative problem-solving. 
+                        <h2>Hi, I’m Nikki, a third-year Computer Science student at the University of Calgary with a passion for software and creative problem-solving. 
                         </h2>
                         <br/>
                         <h2>
-                        Through my <span className='purple'>internship, personal projects, and hackathons</span>, I’ve built a strong foundation in technical development and teamwork.                 For extracurriculars, I’m active with WiCS (Women in Computer Science), Competitive Programming Club, and the Garden Club!
+                        Through my internship, personal projects, and hackathons, I’ve built a strong foundation in technical development and teamwork. For extracurriculars, I’m active with WiCS (Women in Computer Science), Competitive Programming Club, and the Garden Club!
                         </h2>
                         <br/>
                         <h2>
-                        In my free time, I love reading <span className='yellow'>books</span>, <span className='yellow'>running marathons</span>, and <span className='yellow'>gardening</span>!
+                        In my free time, I love reading books, running marathons and gardening!
                         </h2>
                     </div>
                 </div>
@@ -404,9 +407,43 @@ function Main(){
 
             <div className='content-container connect' ref={connectSectionRef}>
                 <h1>Connect <span className='thin'>with me</span></h1>
-
-
+                <EmailForm/>
             </div>
+
+
+            <div className='content-container footer'>
+                <h3>nikkikim999@gmail.com</h3>
+                <div className="icons-ctr">
+                        <div className="icons">
+                        <a 
+                            href="https://www.linkedin.com/in/nikki-kim-161749229/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                            src={linkedinicon}
+                            alt="LinkedIn Logo"
+                            className="icons linkedin-icon" 
+                            />
+                        </a>
+                        </div>
+                        <div className="icons">
+                        <a 
+                            href="https://github.com/nnkim999" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            >
+                            <img
+                                src={giticon}
+                                alt="Github Logo"
+                                className="icons github-icon"  
+                            />
+                        </a>
+                        </div>
+                </div>
+                <h6 className='centered-text'>© 2025 Nikki Kim.</h6>
+            </div>
+        
 
         </div>
 

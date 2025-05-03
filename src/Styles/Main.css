@@ -360,6 +360,11 @@ h1 {
     padding-bottom: 40px;
 }
 
+.connect h2{
+    color:white;
+    text-align: center;
+}
+
 
 
 /*Projects section*/
@@ -421,4 +426,17 @@ h1 {
   
   h3.project-name{
     padding-bottom: 10px;
+  }
+
+  /*footer*/
+
+  .content-container.footer{
+    margin: auto;
+    text-align: center;
+  }
+
+  .footer .icons-ctr{
+    justify-content: center;
+    margin-top:10px;
+    margin-bottom:15px;
   }
