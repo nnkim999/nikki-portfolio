@@ -3,7 +3,7 @@ import "../Styles/Main.css";
 import Navbar from '../Pages/Navbar';
 import EmailForm from '../Pages/Email';
 
-
+import { ReactTyped } from "react-typed";
 import aboutVideo from "../Media/aboutvideo.mp4";
 import profileVideo from "../Media/profile.mp4";
 import linkedinicon from "../Media/linkedinicon.png";
@@ -118,7 +118,18 @@ function Main(){
                 </div>
                 <div className='hero-left'>
                     <h1>Hi, I’m Nikki Kim</h1>
-                    <h2>Computer Science Student</h2>
+                    <h2>
+                        <ReactTyped
+                            className="typing"
+                            strings={[
+                            "Computer Science Student",
+                            "Full-stack Software Developer",
+                            ]}
+                            typeSpeed={100}
+                            backSpeed={50}
+                            loop
+                        />
+                    </h2>
                     <button className='cta-btn' onClick={() => scrollToSection(aboutSectionRef)}>More about me</button>
                     <div className="icons-ctr">
                         <div className="icons">

@@ -57,6 +57,10 @@ h1 {
   }
 
 /*Hero section*/
+.typing {
+    font-weight: 500;
+    color: black;
+  }
 
 .video-container{
     display: flex;
