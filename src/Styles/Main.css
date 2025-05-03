@@ -38,6 +38,17 @@
     font-weight: 700;
 }
 
+.blue{
+    color: #00CFFF;
+}
+
+.purple{
+    color: #C792EA;
+}
+
+.yellow{
+    color: #FCE94F;
+}
 
 h1 {
     font-size: 2.8rem;
@@ -81,7 +92,7 @@ h1 {
   }
 
   .cta-btn:hover{
-    background-color: #94B9FF;
+    background-color:#00CFFF;
     transform: scale(1.05);
   }
 

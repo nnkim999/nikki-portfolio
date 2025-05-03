@@ -155,7 +155,7 @@ function Main(){
                 </div>
             </div>
 
-
+            <div className='extra-padding-50'></div>
             <div className="content-container skills" ref={skillSectionRef}>
                 <h1 className="centered-text extra-padding-25">
                     <span className="thin">My</span> Skills
@@ -281,6 +281,7 @@ function Main(){
                 </div>
             </div>
 
+            <div className='extra-padding-50'></div>
             <div className='content-container experiences' ref={experienceSectionRef}>
                 <h1><span className='thin '>My</span> Experiences</h1>
 
@@ -333,6 +334,7 @@ function Main(){
 
             </div>
 
+            <div className='extra-padding-50'></div>
             <div className='content-container about' ref={aboutSectionRef}>
                 <div className='hero-right'>
                     <div className='video-container extra-padding-25'>
@@ -355,62 +357,60 @@ function Main(){
                 <div className='hero-left'>
                     <div className='text-section-container'>
                         <h1 className='extra-padding-25'><span className='thin'>About</span> Me</h1>
-                        <h2>Hi, I’m Nikki, a third-year Computer Science student at the University of Calgary with a passion for software and creative problem-solving. 
+                        <h2>Hi, I’m Nikki, a third-year <span className='blue'>Computer Science student </span> at the <span className='blue'>University of Calgary</span> with a passion for software and creative problem-solving. 
                         </h2>
                         <br/>
                         <h2>
-                        Through my internship, personal projects, and hackathons, I’ve built a strong foundation in technical development and teamwork.                 For extracurriculars, I’m active with WiCS (Women in Computer Science), Competitive Programming Club, and the Garden Club!
+                        Through my <span className='purple'>internship, personal projects, and hackathons</span>, I’ve built a strong foundation in technical development and teamwork.                 For extracurriculars, I’m active with WiCS (Women in Computer Science), Competitive Programming Club, and the Garden Club!
                         </h2>
                         <br/>
                         <h2>
-                        In my free time, I love reading books, running marathons, and gardening!
+                        In my free time, I love reading <span className='yellow'>books</span>, <span className='yellow'>running marathons</span>, and <span className='yellow'>gardening</span>!
                         </h2>
                     </div>
                 </div>
             </div>
 
-            <div className='gradient-bg'>
+            <div className='extra-padding-50'></div>
+            <div className='content-container projects' ref={projectSectionRef}>
+                <h1 className='centered-text'><span className='thin'>My</span> Projects</h1>
+                <div className='project-slider'>
+                    {/* Left Arrow - now part of the flex flow */}
+                    <div className="nav-arrow arrow-left" onClick={prevProject}>
+                    <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    </div>
 
-                <div className='content-container projects' ref={projectSectionRef}>
-                    <h1 className='centered-text'><span className='thin'>My</span> Projects</h1>
-                    <div className='project-slider'>
-                        {/* Left Arrow - now part of the flex flow */}
-                        <div className="nav-arrow arrow-left" onClick={prevProject}>
-                        <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-                        </svg>
-                        </div>
+                    {/* Project Box - centered with spacing */}
+                    <div className="project-box">
+                    <div className='project-content'>
+                        <h3 className="project-name">{projects[currentProject].title}</h3>
+                        <p className="project-description">
+                        {projects[currentProject].description}
+                        </p>
+                    </div>
+                    </div>
 
-                        {/* Project Box - centered with spacing */}
-                        <div className="project-box">
-                        <div className='project-content'>
-                            <h3 className="project-name">{projects[currentProject].title}</h3>
-                            <p className="project-description">
-                            {projects[currentProject].description}
-                            </p>
-                        </div>
-                        </div>
-
-                        {/* Right Arrow - now part of the flex flow */}
-                        <div className="nav-arrow arrow-right" onClick={nextProject}>
-                        <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                        </div>
+                    {/* Right Arrow - now part of the flex flow */}
+                    <div className="nav-arrow arrow-right" onClick={nextProject}>
+                    <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                    </svg>
                     </div>
                 </div>
-
-
-                <div className='content-container connect' ref={connectSectionRef}>
-                    <h1>Connect <span className='thin'>with me</span></h1>
-
-
-                </div>
-
             </div>
 
+
+            <div className='content-container connect' ref={connectSectionRef}>
+                <h1>Connect <span className='thin'>with me</span></h1>
+
+
+            </div>
 
         </div>
+
+
 
 
     );
