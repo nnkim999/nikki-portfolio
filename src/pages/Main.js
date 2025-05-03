@@ -17,39 +17,49 @@ import {
     SiHtml5,
     SiCss3,
     SiPython,
-    SiNodedotjs,
     SiReact,
-    SiDjango,
-    SiMysql, // Works for MySQL
-    SiCplusplus, // Works for C++
-    SiBlazor, // Works for Blazor
-    SiGit, // Works for Git
-    SiDocker, // Works for Docker
-    SiSelenium, // Works for Selenium
-    SiJunit5,
-    SiC, // Works for JUnit
+    SiMysql,
+    SiCplusplus, 
+    SiBlazor, 
+    SiGit,
+    SiDocker, 
+
   } from "react-icons/si";
 
-import { FaJava, FaJira } from "react-icons/fa"; // Java, JIRA, Git Alternative
-import { DiDatabase } from "react-icons/di"; // General SQL/Database Icon
-import { TbBrandVisualStudio, TbBrandVscode } from "react-icons/tb"; // VS & VS Code
-import { BiSolidServer } from "react-icons/bi"; // SQL Server Studio (Alternative)
-//import { SiCloud } from "react-icons/si"; // Cloud icon, a good substitute for Azure
-import { VscSymbolNamespace } from "react-icons/vsc"; // Alternative for Eclipse
-
+import { FaJava } from "react-icons/fa";
+import { DiDatabase } from "react-icons/di"; 
+import { TbBrandVisualStudio, TbBrandVscode } from "react-icons/tb"; 
+import { BiSolidServer } from "react-icons/bi"; 
 function Main(){
 
+    //video ref
     const aboutVideoRef = useRef(null);
     const profileVideoRef = useRef(null);
+
+    //section ref
+    const homeSectionRef = useRef(null);
+    const skillSectionRef = useRef(null);
+    const aboutSectionRef = useRef(null);
+    const experienceSectionRef = useRef(null);
+    const projectSectionRef = useRef(null);
+    const connectSectionRef = useRef(null);
+
+
+    //scroll
+    const scrollToSection = (ref) => {
+        ref.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      };
+    
     const handleLoadedData = () => {
         if (profileVideoRef.current) {
           profileVideoRef.current.playbackRate = 0.3;
         }
       };
 
-
     //projects
-    // Inside your Main component:
     const [currentProject, setCurrentProject] = useState(0);
 
     const projects = [
@@ -62,6 +72,11 @@ function Main(){
         id: 2,
         title: "Portfolio Website",
         description: "Designed and developed a responsive portfolio site showcasing my work with animations."
+    },
+    {
+        id: 3,
+        title: "Coming soon",
+        description: "..."
     }
     ];
 
@@ -73,9 +88,11 @@ function Main(){
     setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length);
     };
 
+
+
     return(
         <div className="constraint">
-            <div className='content-container hero extra-padding-50'>
+            <div className='content-container hero extra-padding-50' ref={homeSectionRef}>
                 <div className='hero-right extra-padding-25'>
                     <div className='video-container'>
                         <video
@@ -99,7 +116,7 @@ function Main(){
                 <div className='hero-left'>
                     <h1>Hi, I’m Nikki Kim</h1>
                     <h2>Computer Science Student</h2>
-                    <button className='cta-btn'>More about me</button>
+                    <button className='cta-btn' onClick={() => scrollToSection(aboutSectionRef)}>More about me</button>
                     <div className="icons-ctr">
                         <div className="icons">
                         <a 
@@ -114,11 +131,11 @@ function Main(){
                             />
                         </a>
                         </div>
-                        <div className="icons" >
+                        <div className="icons" onClick={() => scrollToSection(connectSectionRef)}>
                         <img
                             src={emailinicon}
                             alt="Email Logo"
-                            className="icons email-icon"
+                            className="icons "
                         />
                         </div>
                         <div className="icons">
@@ -139,12 +156,12 @@ function Main(){
             </div>
 
 
-            <div className="content-container skills">
+            <div className="content-container skills" ref={skillSectionRef}>
                 <h1 className="centered-text extra-padding-25">
                     <span className="thin">My</span> Skills
                 </h1>
 
-                <div className="skills-grid-wrapper">
+                <div className="skills-grid-wrapper extra-padding-50">
                     <div className="skills-grid">
                    
                         <div className="skill-item">
@@ -264,10 +281,10 @@ function Main(){
                 </div>
             </div>
 
-            <div className='content-container experiences'>
+            <div className='content-container experiences' ref={experienceSectionRef}>
                 <h1><span className='thin '>My</span> Experiences</h1>
 
-                <div class="timeline">
+                <div class="timeline extra-padding-25">
                 <div class="experience-item">
                     <div class="experience-content">
                     <div class="job-header">
@@ -316,7 +333,7 @@ function Main(){
 
             </div>
 
-            <div className='content-container about'>
+            <div className='content-container about' ref={aboutSectionRef}>
                 <div className='hero-right'>
                     <div className='video-container extra-padding-25'>
                         <video
@@ -353,7 +370,7 @@ function Main(){
             </div>
 
 
-            <div className='content-container projects'>
+            <div className='content-container projects' ref={projectSectionRef}>
                 <h1 className='centered-text'><span className='thin'>My</span> Projects</h1>
                 <div className='project-slider'>
                     {/* Left Arrow - now part of the flex flow */}
@@ -383,7 +400,7 @@ function Main(){
             </div>
 
 
-            <div className='content-container connect'>
+            <div className='content-container connect' ref={connectSectionRef}>
                 <h1>Connect <span className='thin'>with me</span></h1>
 
 
