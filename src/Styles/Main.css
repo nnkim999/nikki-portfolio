@@ -439,30 +439,16 @@ h1 {
 
   .project-video-container {
     width: 100%;
-<<<<<<< HEAD
     aspect-ratio: 16/9; /* Match video aspect ratio */
     margin: 20px 0;
     border-radius: 8px;
     overflow: hidden;
-=======
-    max-width: 100%; /* Changed from 800px to 100% */
-    margin: 20px 0;
-    border-radius: 8px;
-    overflow: hidden;
-    aspect-ratio: 16/9;
-    background: black; /* Add this if missing */
->>>>>>> 2aef018 (added project videos)
   }
   
   .project-video {
     width: 100%;
     height: 100%;
-<<<<<<< HEAD
     border: none;
-=======
-    object-fit: contain; /* Preserves aspect ratio without cropping */
-    background: #000; /* Black background for letterboxing */
->>>>>>> 2aef018 (added project videos)
   }
 
 

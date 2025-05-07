@@ -6,11 +6,6 @@ import EmailForm from '../Pages/Email';
 import { ReactTyped } from "react-typed";
 import aboutVideo from "../Media/aboutvideo.mp4";
 import profileVideo from "../Media/profile.mp4";
-<<<<<<< HEAD
-=======
-import eventlyVideo from "../Media/Evently.mp4";
-import clinicsVideo from "../Media/ClinicsRUS.mp4";
->>>>>>> 2aef018 (added project videos)
 
 import linkedinicon from "../Media/linkedinicon.png";
 import emailinicon from "../Media/emailicon.png";
@@ -75,21 +70,13 @@ function Main(){
         id: 1,
         title: "Evently",
         description: "All-in-one event booking application for managing events. Built using React, HTML, CSS, and a MySQL database to support multiple user types (admins, organizers, and attendees), with features like ticket purchasing, refunds, and event creation. Docker was utilized for containerization to ensure consistent deployment across environments.",
-<<<<<<< HEAD
         video: 'https://drive.google.com/file/d/1YiYqXxqNi9qHiYbBU24tYskYy__MPQI0/preview'
-=======
-        video: eventlyVideo
->>>>>>> 2aef018 (added project videos)
     },
     {
         id: 2,
         title: "ClinicsRUS",
         description: "Interactive scheduling system for a medical clinic to enhance appointment accessibility. Developed using HTML, CSS, and React, with a user-friendly interface for patients to schedule appointments on both desktop and mobile. Focused on user experience (UX) with a vertical prototype approach to emphasize front-end functionality.",
-<<<<<<< HEAD
         video: 'https://drive.google.com/file/d/1oMKvwPwO4mhPNG93Kb91iI9ktCAkp3H8/preview'
-=======
-        video: clinicsVideo
->>>>>>> 2aef018 (added project videos)
     },
     ];
 
@@ -413,7 +400,6 @@ function Main(){
                     <div className='project-content'>
                         <h3 className="project-name">{projects[currentProject].title}</h3>
                         <div className="project-video-container">
-<<<<<<< HEAD
                             <iframe
                                 src={projects[currentProject].video}
                                 title={`${projects[currentProject].title} Demo`}
@@ -423,22 +409,6 @@ function Main(){
                                 allowFullScreen
                             ></iframe>
                             </div>
-=======
-                        <video 
-                            controls 
-                            className="project-video"
-                            key={projects[currentProject].id}
-                            playsInline
-                        >
-                            <source 
-                            src={projects[currentProject].video} 
-                            type={projects[currentProject].video.includes('.mov') ? 
-                                    'video/quicktime' : 'video/mp4'} 
-                            />
-                            Your browser does not support the video tag.
-                        </video>
-                        </div>
->>>>>>> 2aef018 (added project videos)
                         <p className="project-description">
                         {projects[currentProject].description}
                         </p>
