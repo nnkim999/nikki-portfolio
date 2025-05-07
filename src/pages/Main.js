@@ -13,7 +13,6 @@ import aucicon from "../Media/aucicon.png";
 import wicsicon from "../Media/wicsicon.png";
 import cpcicon from "../Media/cpcicon.png";
 import { TbBrandCSharp } from "react-icons/tb";
-import emailjs from 'emailjs-com';
 
 import {
     SiJavascript,
@@ -299,48 +298,50 @@ function Main(){
             <div className='content-container experiences' ref={experienceSectionRef}>
                 <h1><span className='thin '>My</span> Experiences</h1>
 
-                <div class="timeline extra-padding-25">
-                <div class="experience-item">
-                    <div class="experience-content">
-                    <div class="job-header">
+                <div className="timeline extra-padding-25">
+                <div className="experience-item">
+                    <div className="experience-content">
+                    <div className="job-header">
                         <img
                                 src={aucicon}
                                 alt="AUC Logo"
                                 className="icons" 
                                 />
-                        <h2 class="job-title">Systems Developer Intern at <span className="bolded">AUC</span> </h2>
+                        <h2 className="job-title">Full-Stack Developer Intern at <span className="bolded">AUC</span> </h2>
                     </div>
-                    <div class="date">September 2023 – Present</div>
-                        <p>As a developer, I created web applications using Blazor, HTML, CSS, C#, Entity Framework, REST API, and SQL to deliver efficient, user-friendly solutions while collaborating with a 7-member team through code reviews and Azure repository management.</p>
-                        <p>Serving dual roles, I acted as Junior Project Manager to coordinate team efforts and stakeholder communication, while implementing agile methodologies to meet sprint deadlines. </p>
-                        <p>I enhanced application quality by implementing new features, conducting thorough testing, improving UI with Radzen, and integrating Fluent Validation for robust data validation.</p>
-                        <p>My exceptional performance was recognized with an Employee Appreciation Award, leading to a part-time position offer to balance continued contributions with academic commitments.</p>
+                    <div className="date">September 2023 – Present</div>
+                        <p>As a developer, I created web applications using <span className='bolded'>Blazor, HTML, CSS, C#, Entity Framework, REST API, and SQL</span> to deliver efficient, user-friendly solutions while collaborating with a 7-member team through code reviews and Azure repository management.</p>
+                        <p>Serving dual roles, I acted as Junior Project Manager to coordinate team efforts and stakeholder communication, while implementing <span className='bolded'>agile methodologies</span> to meet sprint deadlines. </p>
+                        <p>I enhanced application quality by implementing new features, conducting thorough testing, improving UI with Radzen, and integrating Fluent Validation for robust <span className='bolded'>data validation</span>.</p>
+                        <p>My exceptional performance was recognized with an <span className='bolded'>Employee Appreciation Award</span>, leading to a part-time position offer to balance continued contributions with academic commitments.</p>
                    </div>
                 </div>
 
-                    <div class="experience-item">
-                        <div class="experience-content">
+                    <div className="experience-item">
+                        <div className="experience-content">
                         <img
                                 src={wicsicon}
                                 alt="WICS Logo"
                                 className="icons" 
                                 />
-                        <h2 class="job-title">VP of Marketing at <span className='bolded'>WiCS</span></h2>
-                        <div class="date">Oct 2023 - May 2025</div>
-                        <p>At WiCS, I served as the VP of marketing, focusing on the design and marketing for the club's social media. Working on projects that involved multiple sponsors and events, I managed 2 Junior VPs and increased reachability and engagement by 200%.</p>
+                        <h2 className="job-title">VP of Marketing at <span className='bolded'>Women in Computer Science (WiCS)</span></h2>
+                        <div className="date">Oct 2023 - May 2025</div>
+                        <p>WiCS is a club at the University of Calgary that aims to create an inclusive and supportive community for women in computer science by fostering mentorship, networking, and professional growth opportunities.</p>
+                        <p>At WiCS, I served as the VP of marketing, focusing on the <span className='bolded'>design and marketing</span> for the club's social media. Working on projects that involved multiple sponsors and events, I <span className='bolded'>managed 2 Junior VPs</span> and increased reachability and engagement by <span className='bolded'>200%</span>.</p>
                         </div>
                     </div>
 
-                    <div class="experience-item">
-                        <div class="experience-content">
+                    <div className="experience-item">
+                        <div className="experience-content">
                         <img
                                 src={cpcicon}
                                 alt="CPC Logo"
                                 className="icons" 
                                 />
-                        <h2 class="job-title">Junior VP of Finance at <span className='bolded'>Competitive Programming Club</span></h2>
-                        <div class="date">Jan 2023 - May 2024</div>
-                        <p>At CPC, I held the role of Jr VP of Finance, where I played a key role in managing the club finances. Responsible for creating and handling invoices to sponsors, I provided strong organization and communication to a cross-functional team.</p>
+                        <h2 className="job-title">Junior VP of Finance at <span className='bolded'>Competitive Programming Club (CPC)</span></h2>
+                        <div className="date">Jan 2023 - May 2024</div>
+                        <p>CPC is a club at the University of Calgary that aims to equip developers with technical skills through training, mentorship, and competitive programming.</p>
+                        <p>At CPC, I held the role of Jr VP of Finance, where I played a key role in <span className='bolded'>managing the club finances</span>. Responsible for creating and handling invoices to sponsors, I provided <span className='bolded'>strong organization and communication</span> to a cross-functional team.</p>
                         </div>
                     </div>
                 </div>
