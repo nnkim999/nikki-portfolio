@@ -6,6 +6,9 @@ import EmailForm from '../Pages/Email';
 import { ReactTyped } from "react-typed";
 import aboutVideo from "../Media/aboutvideo.mp4";
 import profileVideo from "../Media/profile.mp4";
+import eventlyVideo from "../Media/Evently.mp4";
+import clinicsVideo from "../Media/ClinicsRUS.mp4";
+
 import linkedinicon from "../Media/linkedinicon.png";
 import emailinicon from "../Media/emailicon.png";
 import giticon from "../Media/giticon.png";
@@ -68,18 +71,15 @@ function Main(){
     {
         id: 1,
         title: "Evently",
-        description: "I'm Kalvin Doe. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+        description: "All-in-one event booking application for managing events. Built using React, HTML, CSS, and a MySQL database to support multiple user types (admins, organizers, and attendees), with features like ticket purchasing, refunds, and event creation. Docker was utilized for containerization to ensure consistent deployment across environments.",
+        video: eventlyVideo
     },
     {
         id: 2,
-        title: "Portfolio Website",
-        description: "Designed and developed a responsive portfolio site showcasing my work with animations."
+        title: "ClinicsRUS",
+        description: "Interactive scheduling system for a medical clinic to enhance appointment accessibility. Developed using HTML, CSS, and React, with a user-friendly interface for patients to schedule appointments on both desktop and mobile. Focused on user experience (UX) with a vertical prototype approach to emphasize front-end functionality.",
+        video: clinicsVideo
     },
-    {
-        id: 3,
-        title: "Coming soon",
-        description: "..."
-    }
     ];
 
     const nextProject = () => {
@@ -390,31 +390,46 @@ function Main(){
             <div className='content-container projects' ref={projectSectionRef}>
                 <h1 className='centered-text'><span className='thin'>My</span> Projects</h1>
                 <div className='project-slider'>
-                    {/* Left Arrow - now part of the flex flow */}
+                    {/* Left Arrow */}
                     <div className="nav-arrow arrow-left" onClick={prevProject}>
-                    <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                    <svg className="arrow-icon" viewBox="0 0 24 24" fill="none">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
                     </svg>
                     </div>
 
-                    {/* Project Box - centered with spacing */}
+                    {/* Project Box */}
                     <div className="project-box">
                     <div className='project-content'>
                         <h3 className="project-name">{projects[currentProject].title}</h3>
+                        <div className="project-video-container">
+                        <video 
+                            controls 
+                            className="project-video"
+                            key={projects[currentProject].id}
+                            playsInline
+                        >
+                            <source 
+                            src={projects[currentProject].video} 
+                            type={projects[currentProject].video.includes('.mov') ? 
+                                    'video/quicktime' : 'video/mp4'} 
+                            />
+                            Your browser does not support the video tag.
+                        </video>
+                        </div>
                         <p className="project-description">
                         {projects[currentProject].description}
                         </p>
                     </div>
                     </div>
 
-                    {/* Right Arrow - now part of the flex flow */}
+                    {/* Right Arrow */}
                     <div className="nav-arrow arrow-right" onClick={nextProject}>
-                    <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                    <svg className="arrow-icon" viewBox="0 0 24 24" fill="none">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                     </svg>
                     </div>
                 </div>
-            </div>
+                </div>
 
 
             <div className='content-container connect' ref={connectSectionRef}>
