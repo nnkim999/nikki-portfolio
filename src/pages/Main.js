@@ -120,7 +120,7 @@ function Main(){
                             className="typing"
                             strings={[
                             "Computer Science Student",
-                            "Full-stack Software Developer",
+                            "Full-Stack Software Developer",
                             ]}
                             typeSpeed={100}
                             backSpeed={50}
