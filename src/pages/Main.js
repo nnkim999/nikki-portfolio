@@ -47,6 +47,15 @@ function Main(){
     const projectSectionRef = useRef(null);
     const connectSectionRef = useRef(null);
 
+    // Bundle all refs in an object
+    const sectionRefs = {
+        home: homeSectionRef,
+        skills: skillSectionRef,
+        experiences: experienceSectionRef,
+        about: aboutSectionRef,
+        projects: projectSectionRef,
+        connect: connectSectionRef
+    };
 
     //scroll
     const scrollToSection = (ref) => {
@@ -89,9 +98,9 @@ function Main(){
     };
 
 
-    
     return(
         <div className="constraint">
+            <Navbar scrollToSection={scrollToSection} sectionRefs={sectionRefs} />
             <div className='content-container hero extra-padding-50' ref={homeSectionRef}>
                 <div className='hero-right extra-padding-25'>
                     <div className='video-container'>

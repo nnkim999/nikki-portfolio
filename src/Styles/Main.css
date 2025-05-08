@@ -464,3 +464,62 @@ h1 {
     margin-top:10px;
     margin-bottom:15px;
   }
+
+
+
+  /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .constraint{
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  
+  .first{
+    display: flex;
+  }
+  
+  .first-right-side{
+    display: flex;
+    order: 2;
+    width: 50%;
+    align-items: center;
+  }
+  
+  .first-left-side{
+    width: 50%;
+    text-align: left;
+  }
+  
+  .first-left-side h1{
+    align-items: center;
+    font-size: 72px;
+
+  }
+  
+  .first-left-side .btn {
+    margin: 50px 20px;
+  }
+  
+  .first-text{
+    padding-top: 20%;
+  }
+  
+  .first-text p {
+    margin: 20px;
+  }
+  
+  .second{
+    display: flex;
+  }
+  
+  .second-image{
+    display: flex;
+    width: 60%;
+    align-items: center;
+  }
+  
+  .blue-background{
+    width: 40%;
+  }
+  
+}

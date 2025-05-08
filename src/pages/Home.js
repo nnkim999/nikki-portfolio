@@ -49,6 +49,7 @@ function Home() {
     <div className="main-section" ref={homeSectionRef}>
         <Navbar scrollToSection={scrollToSection} sectionRefs={{
         home: homeSectionRef,
+        skill: skillSectionRef,
         about: aboutSectionRef,
         experiences: experienceSectionRef,
         projects: projectSectionRef,
