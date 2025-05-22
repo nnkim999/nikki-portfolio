@@ -358,7 +358,7 @@ function Main(){
 
             <div className='extra-padding-50'></div>
             <div className='content-container about' ref={aboutSectionRef}>
-                <div className='hero-right'>
+                <div className='about-right'>
                     <div className='video-container extra-padding-25'>
                         <video
                             ref={aboutVideoRef}
@@ -376,7 +376,7 @@ function Main(){
                         </video>
                     </div>
                 </div>
-                <div className='hero-left'>
+                <div className='about-left'>
                     <div className='text-section-container'>
                         <h1 className='extra-padding-25'><span className='thin'>About</span> Me</h1>
                         <h2>Hi, I’m Nikki, a third-year Computer Science student at the University of Calgary with a passion for software and creative problem-solving. 
