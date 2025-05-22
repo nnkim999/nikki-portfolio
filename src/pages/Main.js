@@ -129,7 +129,7 @@ function Main(){
                             className="typing"
                             strings={[
                             "Computer Science Student",
-                            "Full-Stack Software Developer",
+                            "Full-Stack Developer",
                             ]}
                             typeSpeed={100}
                             backSpeed={50}
@@ -175,6 +175,7 @@ function Main(){
                 </div>
             </div>
 
+            <div className='extra-padding-50'></div>
             <div className='extra-padding-50'></div>
             <div className="content-container skills" ref={skillSectionRef}>
                 <h1 className="centered-text extra-padding-25">
