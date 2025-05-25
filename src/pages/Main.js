@@ -358,7 +358,7 @@ function Main(){
 
             </div>
 
-            <div className='extra-padding-25'></div>
+
             <div className='extra-padding-50'></div>
             <div className='extra-padding-25' ref={aboutSectionRef}></div>
             <div className='extra-padding-50'></div>
