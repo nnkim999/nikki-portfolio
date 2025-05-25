@@ -9,6 +9,7 @@
     display: block; /* Remove flex unless specifically needed */
   }
   
+  
 .content-container{
     padding: 40px 15px;
 }

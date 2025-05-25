@@ -99,9 +99,11 @@ function Main(){
 
 
     return(
+        <>
+        <Navbar scrollToSection={scrollToSection} sectionRefs={sectionRefs} />
         <div className="constraint">
-            <Navbar scrollToSection={scrollToSection} sectionRefs={sectionRefs} />
-            <div className='content-container hero extra-padding-50' ref={homeSectionRef}>
+            <div class="extra-padding-50" ref={homeSectionRef}></div>
+            <div className='content-container hero extra-padding-50' >
                 <div className='hero-right extra-padding-25'>
                     <div className='video-container'>
                         <video
@@ -176,8 +178,8 @@ function Main(){
             </div>
 
             <div className='extra-padding-50'></div>
-            <div className='extra-padding-50'></div>
-            <div className="content-container skills" ref={skillSectionRef}>
+            <div className='extra-padding-50' ref={skillSectionRef}></div>
+            <div className="content-container skills" >
                 <h1 className="centered-text extra-padding-25">
                     <span className="thin">My</span> Skills
                 </h1>
@@ -302,10 +304,9 @@ function Main(){
                 </div>
             </div>
 
-            <div className='extra-padding-50'></div>
-            <div className='content-container experiences' ref={experienceSectionRef}>
+            <div className='content-container experiences extra-padding-25' ref={experienceSectionRef}></div>
+            <div className='content-container experiences' >
                 <h1><span className='thin '>My</span> Experiences</h1>
-
                 <div className="timeline extra-padding-25">
                 <div className="experience-item">
                     <div className="experience-content">
@@ -357,8 +358,11 @@ function Main(){
 
             </div>
 
+            <div className='extra-padding-25'></div>
             <div className='extra-padding-50'></div>
-            <div className='content-container about' ref={aboutSectionRef}>
+            <div className='extra-padding-25' ref={aboutSectionRef}></div>
+            <div className='extra-padding-50'></div>
+            <div className='content-container about' >
                 <div className='about-right'>
                     <div className='video-container extra-padding-25'>
                         <video
@@ -394,8 +398,10 @@ function Main(){
                 </div>
             </div>
 
+            <div className='extra-padding-25'></div>
             <div className='extra-padding-50'></div>
             <div className='content-container projects' ref={projectSectionRef}>
+            <div className='extra-padding-25'></div>
                 <h1 className='centered-text'><span className='thin'>My</span> Projects</h1>
                 <div className='project-slider'>
                     {/* Left Arrow */}
@@ -434,8 +440,8 @@ function Main(){
                 </div>
                 </div>
 
-
             <div className='content-container connect' ref={connectSectionRef}>
+            <div className='extra-padding-50'></div>
                 <h1>Connect <span className='thin'>with me</span></h1>
                 <EmailForm/>
             </div>
@@ -476,7 +482,7 @@ function Main(){
         
 
         </div>
-
+        </>
 
 
 
