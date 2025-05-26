@@ -4,11 +4,10 @@
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
-    box-sizing: border-box; /* Crucial - includes padding in width calculation */
-    overflow-x: hidden; /* Prevents horizontal scroll */
-    display: block; /* Remove flex unless specifically needed */
-  }
-  
+    box-sizing: border-box; 
+    overflow-x: hidden;
+    display: block;
+}
   
 .content-container{
     padding: 40px 15px;
@@ -53,7 +52,6 @@ h1 {
   }
 
 /*Hero section*/
-/* Animation Styles */
 .hero-left {
   opacity: 0;
   transform: translateX(-50px);
@@ -79,7 +77,6 @@ h1 {
   }
 }
 
-
 .typing {
     font-weight: 500;
     color: black;
@@ -103,20 +100,19 @@ h1 {
     cursor: default;
 }
 
-
 .cta-btn {
   margin-top: 28px;
   padding: 12px 24px;
   background: black;
   color: white;
   border: none;
-  border-radius: 4px; /* Changed from 4px to match glow */
+  border-radius: 4px; 
   font-size: 1rem;
   cursor: pointer;
   align-self: flex-start;
   position: relative;
-  overflow: visible; /* Changed from hidden */
-  z-index: 1; /* Added to ensure proper stacking */
+  overflow: visible; 
+  z-index: 1; 
 }
 
 .cta-btn::before {
@@ -188,9 +184,9 @@ h1 {
   }
 
 
-  /*Skills section*/
+/*Skills section*/
 .content-container.skills {
-    overflow: hidden; /* Prevents horizontal scrolling */
+    overflow: hidden; 
   }
   
   .skills-grid-wrapper {
@@ -200,8 +196,8 @@ h1 {
   
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* FORCE 2 columns */
-    gap: 16px; /* Adjust spacing as needed */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 16px; 
     width: 100%;
     margin: 0 auto;
   }
@@ -215,7 +211,7 @@ h1 {
   
   .skill-box {
     width: 100%;
-    aspect-ratio: 1/1; /* Perfect square */
+    aspect-ratio: 1/1; 
     max-width: 120px;
     border: 2px solid #000;
     display: flex;
@@ -320,7 +316,6 @@ h1 {
   }
 
 /*Experiences section*/
-
 .content-container.experiences{
     background-color: black;
     margin-top: -1px;
@@ -421,10 +416,10 @@ h1 {
 
 
 
-  /*Connect section*/
-  .content-container.connect{
-    background-color: black;
-    margin-top: -1px;
+/*Connect section*/
+.content-container.connect{
+  background-color: black;
+  margin-top: -1px;
 }
 
 .connect h1{
@@ -437,8 +432,6 @@ h1 {
     color:white;
     text-align: center;
 }
-
-
 
 /*Projects section*/
 .content-container.projects{
@@ -453,11 +446,11 @@ h1 {
     padding: 80px 0 200px;
     margin-bottom: -1px;
 }
-/* Project Slider Styles */
+
 .project-slider {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Changed from center to space-between */
+    justify-content: space-between; 
     gap: 20px;
     position: relative;
     margin: 50px auto;
@@ -467,17 +460,17 @@ h1 {
   
   
   .project-box {
-    flex: 1; /* Allow box to grow */
-    min-width: 0; /* Allow shrinking */
+    flex: 1; 
+    min-width: 0;
     background: black;
     color: white;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     padding: 30px;
     min-height: 300px;
-    width: 90%; /* Control box width */
+    width: 90%; 
     max-width: 1000px;
-    margin: 0 auto; /* Center the box */
+    margin: 0 auto; 
   }
   
   .nav-arrow {
@@ -493,8 +486,8 @@ h1 {
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 5px;
-    flex-shrink: 0; /* Prevent arrows from shrinking */
-    position: static; /* Change from absolute to static */
+    flex-shrink: 0; 
+    position: static; 
   }
   
   .nav-arrow:hover {
@@ -508,7 +501,7 @@ h1 {
 
   .project-video-container {
     width: 100%;
-    aspect-ratio: 16/9; /* Match video aspect ratio */
+    aspect-ratio: 16/9;
     margin: 20px 0;
     border-radius: 8px;
     overflow: hidden;
@@ -522,7 +515,6 @@ h1 {
 
 
   /*footer*/
-
   .content-container.footer{
     margin: auto;
     text-align: center;
@@ -536,7 +528,7 @@ h1 {
 
 
 
-  /* Large devices (laptops/desktops, 992px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .constraint{
     max-width: 1500px;
@@ -599,8 +591,8 @@ h1 {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* FORCE 2 columns */
-  gap: 16px; /* Adjust spacing as needed */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 16px; 
   width: 100%;
   margin: 0 auto;
 }

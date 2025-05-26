@@ -14,17 +14,16 @@
     margin-bottom: 5px;
     font-weight: 500;
   }
-  
-  /* Fixed input styles */
+
   .form-group input,
   .form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid white; /* Darker border for visibility */
+    border: 1px solid white; 
     border-radius: 4px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    box-sizing: border-box; /* Includes padding in width calculation */
+    background-color: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box; 
   }
   
   .form-group textarea {
@@ -41,8 +40,8 @@
     cursor: pointer;
     font-size: 16px;
     transition: all 0.3s;
-    width: 100%; /* Full width button */
-    box-sizing: border-box; /* Consistent sizing */
+    width: 100%; 
+    box-sizing: border-box; 
   }
   
   .submit-btn:hover {
@@ -75,37 +74,35 @@
     border: 1px solid #F44336;
   }
 
-  /* Add these styles to your Email.css */
 
-/* White placeholder text for all inputs */
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: white;
-  opacity: 0.7; /* Slightly transparent for better UX */
+  opacity: 0.7;
 }
 
-/* WebKit browsers (Chrome, Safari) */
+
 .form-group input::-webkit-input-placeholder,
 .form-group textarea::-webkit-input-placeholder {
   color: white;
   opacity: 0.7;
 }
 
-/* Firefox */
+
 .form-group input::-moz-placeholder,
 .form-group textarea::-moz-placeholder {
   color: white;
   opacity: 0.7;
 }
 
-/* Microsoft Edge */
+
 .form-group input::-ms-input-placeholder,
 .form-group textarea::-ms-input-placeholder {
   color: white;
   opacity: 0.7;
 }
 
-/* Modern browsers */
+
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: white;
@@ -113,8 +110,8 @@
 }
 
 #message {
-  min-height: 100px;  /* minimum height */
-  max-height: 300px;  /* maximum height */
-  resize: vertical;   /* allow user to resize only vertically */
-  overflow-y: auto;   /* show scrollbar if content overflows max height */
+  min-height: 150px;  
+  max-height: 400px;  
+  resize: vertical;  
+  overflow-y: auto; 
 }

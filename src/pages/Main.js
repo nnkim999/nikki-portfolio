@@ -47,7 +47,7 @@ function Main(){
     const projectSectionRef = useRef(null);
     const connectSectionRef = useRef(null);
 
-    // Bundle all refs in an object
+    //bundle all refs in an object
     const sectionRefs = {
         home: homeSectionRef,
         skills: skillSectionRef,
@@ -115,7 +115,7 @@ function Main(){
                             className="round-video"
                             onLoadedData={handleLoadedData}
                             style={{
-                            pointerEvents: 'none' // Disables all interactions
+                            pointerEvents: 'none' //disables all interactions
                             }}
                         >
                             <source src={profileVideo} type="video/mp4" />
@@ -153,12 +153,14 @@ function Main(){
                             />
                         </a>
                         </div>
-                        <div className="icons" onClick={() => scrollToSection(connectSectionRef)}>
-                        <img
-                            src={emailinicon}
-                            alt="Email Logo"
-                            className="icons "
-                        />
+                        <div className="icons">
+                        <a href="mailto:nikkikim999@gmail.com" className="icons">
+                            <img
+                                src={emailinicon}
+                                alt="Email Logo"
+                                className="icons"
+                            />
+                        </a>
                         </div>
                         <div className="icons">
                         <a 
@@ -374,7 +376,7 @@ function Main(){
                             className="round-video"
                             onLoadedData={handleLoadedData}
                             style={{
-                            pointerEvents: 'none' // Disables all interactions
+                            pointerEvents: 'none' //disables all interactions
                             }}
                         >
                             <source src={aboutVideo} type="video/mp4" />
@@ -460,6 +462,15 @@ function Main(){
                             src={linkedinicon}
                             alt="LinkedIn Logo"
                             className="icons linkedin-icon" 
+                            />
+                        </a>
+                        </div>
+                        <div className="icons">
+                        <a href="mailto:nikkikim999@gmail.com" className="icons">
+                            <img
+                                src={emailinicon}
+                                alt="Email Logo"
+                                className="icons"
                             />
                         </a>
                         </div>

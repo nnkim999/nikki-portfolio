@@ -114,7 +114,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             placeholder='Your message'
-            maxLength={2000}
+            maxLength={5000}
           />
         </div>
         
