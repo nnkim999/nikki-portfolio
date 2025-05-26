@@ -4,6 +4,7 @@ import "../Styles/Email.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
+    name: '',
     email: '',
     subject: '',
     message: ''
@@ -14,23 +15,33 @@ const ContactForm = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+
+    // Clear submit status on user input
+    if (submitStatus) {
+      setSubmitStatus(null);
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Replace with your EmailJS service ID, template ID, and user ID
+
     emailjs.send(
-      'YOUR_SERVICE_ID',
-      'YOUR_TEMPLATE_ID',
+      'service_gnacdwy',
+      'template_ivncq7e',
       formData,
-      'YOUR_USER_ID'
+      'A4N6pc0YONPPgiqby'
+    )
+    emailjs.send(
+      'service_gnacdwy',
+      'template_4chdqln',
+      formData,
+      'A4N6pc0YONPPgiqby'
     )
     .then((response) => {
       console.log('SUCCESS!', response.status, response.text);
       setSubmitStatus('success');
-      setFormData({ email: '', subject: '', message: '' });
+      setFormData({ name: '', email: '', subject: '', message: '' });
     })
     .catch((err) => {
       console.log('FAILED...', err);
@@ -43,6 +54,7 @@ const ContactForm = () => {
 
   return (
     <div className="contact-form-container">
+      
       {submitStatus === 'success' && (
         <div className="success-message">
           Thank you! Your message has been sent successfully.
@@ -54,7 +66,21 @@ const ContactForm = () => {
         </div>
       )}
       
+      
       <form onSubmit={handleSubmit}>
+
+        <div className="form-group">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            placeholder='Your name'
+            maxLength={100} 
+          />
+        </div>
         <div className="form-group">
           <input
             type="email"
@@ -76,6 +102,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             placeholder='Your subject'
+            maxLength={800} 
           />
         </div>
         
@@ -87,6 +114,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             placeholder='Your message'
+            maxLength={2000}
           />
         </div>
         

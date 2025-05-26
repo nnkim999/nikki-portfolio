@@ -79,13 +79,13 @@ function Main(){
         id: 1,
         title: "Evently",
         description: "All-in-one event booking application for managing events. Built using React, HTML, CSS, and a MySQL database to support multiple user types (admins, organizers, and attendees), with features like ticket purchasing, refunds, and event creation. Docker was utilized for containerization to ensure consistent deployment across environments.",
-        video: 'https://drive.google.com/file/d/1YiYqXxqNi9qHiYbBU24tYskYy__MPQI0/preview'
+        video: 'https://www.youtube.com/embed/zFcE9G75BFw?'
     },
     {
         id: 2,
         title: "ClinicsRUS",
         description: "Interactive scheduling system for a medical clinic to enhance appointment accessibility. Developed using HTML, CSS, and React, with a user-friendly interface for patients to schedule appointments on both desktop and mobile. Focused on user experience (UX) with a vertical prototype approach to emphasize front-end functionality.",
-        video: 'https://drive.google.com/file/d/1oMKvwPwO4mhPNG93Kb91iI9ktCAkp3H8/preview'
+        video: 'https://www.youtube.com/embed/x0L31Qy58Oc'
     },
     ];
 
@@ -420,10 +420,10 @@ function Main(){
                                 src={projects[currentProject].video}
                                 title={`${projects[currentProject].title} Demo`}
                                 className="project-video"
-                                allow="autoplay"
+                                allow="autoplay; encrypted-media"
                                 frameBorder="0"
                                 allowFullScreen
-                            ></iframe>
+                                ></iframe>
                             </div>
                         <p className="project-description">
                         {projects[currentProject].description}
