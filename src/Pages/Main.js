@@ -409,7 +409,7 @@ function Main(){
                     {/* Left Arrow */}
                     <div className="nav-arrow arrow-left" onClick={prevProject}>
                     <svg className="arrow-icon" viewBox="0 0 24 24" fill="none">
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                        <path stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
                     </svg>
                     </div>
 
@@ -436,7 +436,7 @@ function Main(){
                     {/* Right Arrow */}
                     <div className="nav-arrow arrow-right" onClick={nextProject}>
                     <svg className="arrow-icon" viewBox="0 0 24 24" fill="none">
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                        <path stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                     </svg>
                     </div>
                 </div>
