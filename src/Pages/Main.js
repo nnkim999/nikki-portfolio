@@ -435,8 +435,8 @@ function Main(){
 
                     {/* Right Arrow */}
                     <div className="nav-arrow arrow-right" onClick={nextProject}>
-                    <svg className="arrow-icon" viewBox="0 0 24 24" fill="none">
-                        <path stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                    <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="white">
+                        <path  style={{ stroke: 'white' }}  strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                     </svg>
                     </div>
                 </div>
