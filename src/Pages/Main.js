@@ -269,11 +269,11 @@ function Main(){
 
                         <div className="skill-item">
                             <div className="skill-box">
-                                <SiDocker className="skill-icon docker-icon" />
+                                <SiBlazor className="skill-icon blazor-icon" />
                             </div>
-                            <div className="skill-name">Docker</div>
+                            <div className="skill-name">Blazor</div>
                         </div>
-
+                        
                         <div className="skill-item">
                             <div className="skill-box">
                                 <TbBrandVisualStudio className="skill-icon vs-icon" />
@@ -297,9 +297,9 @@ function Main(){
 
                         <div className="skill-item">
                             <div className="skill-box">
-                                <SiBlazor className="skill-icon blazor-icon" />
+                                <SiDocker className="skill-icon docker-icon" />
                             </div>
-                            <div className="skill-name">Blazor</div>
+                            <div className="skill-name">Docker</div>
                         </div>
 
                     </div>
