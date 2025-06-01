@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import "../Styles/Main.css";
 import Navbar from '../Pages/Navbar';
 import EmailForm from '../Pages/Email';
@@ -6,6 +6,8 @@ import EmailForm from '../Pages/Email';
 import { ReactTyped } from "react-typed";
 import aboutVideo from "../Media/aboutvideo.mp4";
 import profileVideo from "../Media/profile.mp4";
+import aboutImage from "../Media/aboutImage.jpg";
+import lowPowerProfile from "../Media/lowPowerProfile.jpg";
 
 import linkedinicon from "../Media/linkedinicon.png";
 import emailinicon from "../Media/emailicon.png";
@@ -71,6 +73,27 @@ function Main(){
         }
       };
 
+    //images
+    const [isLowPowerMode, setIsLowPowerMode] = useState(false);
+    const ensureVideoPlays = async (video) => {
+        if (!video) return;
+        try {
+          await video.play();
+        } catch (error) {
+          // Autoplay failed (likely low power mode)
+          setIsLowPowerMode(true);
+        }
+      };
+
+      useEffect(() => {
+        if (profileVideoRef.current) {
+          profileVideoRef.current.playbackRate = 0.3;
+          ensureVideoPlays(profileVideoRef.current);
+        }
+      }, []);
+      
+      
+
     //projects
     const [currentProject, setCurrentProject] = useState(0);
 
@@ -105,22 +128,32 @@ function Main(){
             <div class="extra-padding-50" ref={homeSectionRef}></div>
             <div className='content-container hero extra-padding-50' >
                 <div className='hero-right extra-padding-25'>
-                    <div className='video-container'>
+                <div className='video-container'>
+                    {isLowPowerMode ? (
+                        <img
+                        src={lowPowerProfile}
+                        alt="Profile"
+                        className="round-video"
+                        />
+                    ) : (
                         <video
-                            ref={profileVideoRef}
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="round-video"
-                            onLoadedData={handleLoadedData}
-                            style={{
-                            pointerEvents: 'none' //disables all interactions
-                            }}
+                        ref={profileVideoRef}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="round-video"
+                        onLoadedData={handleLoadedData}
+                        style={{
+                            pointerEvents: 'none'
+                        }}
                         >
-                            <source src={profileVideo} type="video/mp4" />
+                        <source src={profileVideo} type="video/mp4" />
                         </video>
-                    </div>
+                    )}
+                </div>
+
+            
                     
 
                 </div>
@@ -367,7 +400,14 @@ function Main(){
             <div className='content-container about' >
                 <div className='about-right'>
                     <div className='video-container extra-padding-25'>
-                        <video
+                        {isLowPowerMode ? (
+                            <img
+                            src={aboutImage}
+                            alt="Profile"
+                            className="round-video"
+                            />
+                        ) : (
+                            <video
                             ref={aboutVideoRef}
                             autoPlay
                             loop
@@ -376,11 +416,12 @@ function Main(){
                             className="round-video"
                             onLoadedData={handleLoadedData}
                             style={{
-                            pointerEvents: 'none' //disables all interactions
+                                pointerEvents: 'none'
                             }}
-                        >
-                            <source src={aboutVideo} type="video/mp4" />
-                        </video>
+                            >
+                            <source src={profileVideo} type="video/mp4" />
+                            </video>
+                        )}
                     </div>
                 </div>
                 <div className='about-left'>
