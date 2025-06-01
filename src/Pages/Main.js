@@ -163,6 +163,8 @@ function Main(){
                             strings={[
                             "Computer Science Student",
                             "Full-Stack Developer",
+                            "Tech Enthusiast",
+                            "Problem Solver"
                             ]}
                             typeSpeed={100}
                             backSpeed={50}
