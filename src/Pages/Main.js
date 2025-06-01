@@ -4,7 +4,6 @@ import Navbar from '../Pages/Navbar';
 import EmailForm from '../Pages/Email';
 
 import { ReactTyped } from "react-typed";
-import aboutVideo from "../Media/aboutvideo.mp4";
 import profileVideo from "../Media/profile.mp4";
 import aboutImage from "../Media/aboutImage.jpg";
 import lowPowerProfile from "../Media/lowPowerProfile.jpg";
@@ -38,7 +37,6 @@ import { BiSolidServer } from "react-icons/bi";
 function Main(){
 
     //video ref
-    const aboutVideoRef = useRef(null);
     const profileVideoRef = useRef(null);
 
     //section ref
@@ -400,28 +398,11 @@ function Main(){
             <div className='content-container about' >
                 <div className='about-right'>
                     <div className='video-container extra-padding-25'>
-                        {isLowPowerMode ? (
                             <img
                             src={aboutImage}
                             alt="Profile"
                             className="round-video"
                             />
-                        ) : (
-                            <video
-                            ref={aboutVideoRef}
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="round-video"
-                            onLoadedData={handleLoadedData}
-                            style={{
-                                pointerEvents: 'none'
-                            }}
-                            >
-                            <source src={aboutVideo} type="video/mp4" />
-                            </video>
-                        )}
                     </div>
                 </div>
                 <div className='about-left'>
