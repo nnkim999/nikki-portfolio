@@ -419,7 +419,7 @@ function Main(){
                                 pointerEvents: 'none'
                             }}
                             >
-                            <source src={profileVideo} type="video/mp4" />
+                            <source src={aboutVideo} type="video/mp4" />
                             </video>
                         )}
                     </div>
